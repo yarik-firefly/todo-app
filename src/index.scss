@@ -21,6 +21,7 @@ code {
 }
 
 .todo {
+  display: flex;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,9 +34,25 @@ code {
   border: 1px solid #f1f1f1;
   &__sidebar {
     width: 200px;
-    height: 100%;
+    height: calc(100% - 120px);
     background-color: #f4f6f8;
     border-right: 1px solid #f1f1f1;
     padding: 60px 20px;
+  }
+
+  &__tasks {
+    flex: 1;
+    padding: 56px 57px;
+    background-color: white;
+  }
+}
+
+.input {
+  border-radius: 4px;
+  border: 1px solid #efefef;
+  transition: border-color 0.2s linear;
+  padding: 8px 12px;
+  &:focus {
+    border-color: #c1bebe;
   }
 }
