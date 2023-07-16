@@ -26,12 +26,59 @@ code {
   top: 50%;
   left: 50%;
   width: 746px;
-  height: 529px;
+  min-height: 529px;
   background-color: #f1f1f1;
   transform: translate(-50%, -50%);
   box-shadow: 2px 20px #f3f3f3;
   border-radius: 10px;
   border: 1px solid #f1f1f1;
+
+  &__delete-window-popup {
+    width: 200px;
+    height: 50px;
+    background-color: #64c4ed;
+    text-align: center;
+    padding: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    opacity: 0;
+
+    &.active {
+      opacity: 1;
+    }
+
+    p {
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    button {
+      margin: 10px;
+      border: none;
+      width: 70px;
+      height: 30px;
+      font-size: 15px;
+      color: #f1f1f1;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      border-radius: 10px;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &__first {
+      background-color: rgb(30, 209, 30);
+    }
+
+    &__second {
+      background-color: rgb(243, 80, 80);
+    }
+  }
   &__sidebar {
     width: 200px;
     height: calc(100% - 120px);

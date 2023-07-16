@@ -4,12 +4,20 @@ import List from "../List/List";
 import "./AddBtnList.scss";
 import Badge from "../Badge/Badge";
 import closeIco from "../../assets/img/close-ico.png";
+import axios from "axios";
 
 const AddBtnList = ({ colors, onAdd }) => {
   const [showPopup, setShowPopup] = React.useState(false);
-  const [selectedColor, setSelectedColor] = React.useState(colors[0].id);
+  const [selectedColor, setSelectedColor] = React.useState(3);
   const [inputValue, setInputValue] = React.useState("");
   const [emptyInput, setEmptyValue] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(false);
+
+  React.useEffect(() => {
+    if (Array.isArray(colors)) {
+      setSelectedColor(colors[0].id);
+    }
+  }, [colors]);
 
   const simpleSettings = () => {
     setShowPopup(false);
@@ -25,13 +33,21 @@ const AddBtnList = ({ colors, onAdd }) => {
       }, 700);
       return;
     }
-    const color = colors.filter((c) => c.id === selectedColor)[0].name;
-    onAdd({
-      id: Math.random(),
-      name: inputValue,
-      color: color,
-    });
-    simpleSettings()
+    setIsLoading(true);
+    axios
+      .post("http://localhost:3001/lists", {
+        name: inputValue,
+        colorId: selectedColor,
+      })
+      .then(({ data }) => {
+        const color = colors.filter((c) => c.id === selectedColor)[0].name;
+        const listObj = { ...data, color: { name: color } };
+        onAdd(listObj);
+        simpleSettings();
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -61,16 +77,19 @@ const AddBtnList = ({ colors, onAdd }) => {
           type="text"
         />
         <div className="popup__circle-color">
-          {colors.map((color) => (
-            <Badge
-              className={selectedColor === color.id && "active"}
-              onClick={() => setSelectedColor(color.id)}
-              key={color.id}
-              color={color.name}
-            />
-          ))}
+          {colors &&
+            colors.map((color) => (
+              <Badge
+                className={selectedColor === color.id && "active"}
+                onClick={() => setSelectedColor(color.id)}
+                key={color.id}
+                color={color.name}
+              />
+            ))}
         </div>
-        <button onClick={addList}>Добавить</button>
+        <button className={isLoading && "active"} onClick={addList}>
+          {isLoading ? "Добавление..." : "Добавить"}
+        </button>
       </div>
     </>
   );

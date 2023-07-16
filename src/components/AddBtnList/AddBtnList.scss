@@ -85,6 +85,11 @@
     &:active {
       background-color: darken($color: #4dd599, $amount: 10);
     }
+
+    &.active {
+      background-color: darken($color: #3c3b3b62, $amount: 0);
+      pointer-events: none;
+    }
   }
 
   &__circle-color {

@@ -2,20 +2,48 @@ import React from "react";
 import list from "../../assets/img/list-ico.png";
 import "./List.scss";
 import Badge from "../Badge/Badge";
+import axios from "axios";
+import AppContext from "../../context/AppContext";
 
-const List = ({ items, setShowPopup, isRemoveble, onRemove }) => {
+const List = ({
+  items,
+  setShowPopup,
+  isRemoveble,
+  onRemove,
+  onClickItem,
+  activeItem,
+}) => {
+  // const { deleteItem, setDeleteItem } = React.useContext(AppContext);
   const removeList = (item) => {
+    // setShowDeletePopup(true);
     if (window.confirm("Вы действительно хотите удалить?")) {
-      onRemove(item);
+      axios.delete(`http://localhost:3001/lists/${item.id}`).then(() => {
+        onRemove(item.id);
+        // setShowDeletePopup(false);
+      });
     }
   };
 
   return (
-    <ul className="ul">
+    <ul onClick={setShowPopup} className="ul">
       {items.map((item, index) => (
-        <li onClick={setShowPopup} className={item.className} key={index}>
-          {item.img ? <img src={item.img} /> : <Badge color={item.color} />}
-          <span>{item.name}</span>
+        <li
+          onClick={onClickItem ? () => onClickItem(item) : null}
+          className={`${item.className}${
+            activeItem && activeItem?.id === item.id && " active"
+          } `}
+          key={index}
+        >
+          {item.img ? (
+            <img src={item.img} />
+          ) : (
+            <Badge color={item.color?.name} />
+          )}
+          <span>
+            {item.name}
+            {item.tasks?.length > 0 && ` (${item.tasks.length})`}
+          </span>
+
           {isRemoveble && (
             <svg
               onClick={() => removeList(item)}
