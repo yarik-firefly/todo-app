@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/yarik-firefly/todo-app.git/static/css/main.3b94a260.css",
-    "main.js": "/yarik-firefly/todo-app.git/static/js/main.df0bc0b5.js",
-    "index.html": "/yarik-firefly/todo-app.git/index.html",
-    "main.3b94a260.css.map": "/yarik-firefly/todo-app.git/static/css/main.3b94a260.css.map",
-    "main.df0bc0b5.js.map": "/yarik-firefly/todo-app.git/static/js/main.df0bc0b5.js.map"
+    "main.css": "/todo-app/static/css/main.3b94a260.css",
+    "main.js": "/todo-app/static/js/main.df0bc0b5.js",
+    "index.html": "/todo-app/index.html",
+    "main.3b94a260.css.map": "/todo-app/static/css/main.3b94a260.css.map",
+    "main.df0bc0b5.js.map": "/todo-app/static/js/main.df0bc0b5.js.map"
   },
   "entrypoints": [
     "static/css/main.3b94a260.css",
