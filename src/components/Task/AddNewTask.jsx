@@ -16,7 +16,7 @@ const AddNewTask = () => {
 
   const addNewTask = () => {
     const obj = {
-      listId: activeItem.id,
+      listId: activeItem?.id,
       text: inputValue,
       completed: false,
     };
@@ -24,7 +24,6 @@ const AddNewTask = () => {
     axios
       .post("http://localhost:3001/tasks", obj)
       .then(({ data }) => {
-        console.log(data);
         onAddNewTask(activeItem.id, data);
         togglePopupTask();
       })

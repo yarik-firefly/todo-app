@@ -189,6 +189,7 @@ function App() {
                     activeItem={list}
                     onEditTitle={onEditTitleName}
                     withoutEmpty
+                    disable
                   />
                 ))
               }
@@ -199,7 +200,7 @@ function App() {
             <Route
               path="lists/:id"
               element={
-                <Task activeItem={activeItem} onEditTitle={onEditTitleName} />
+                <Task disable={false} activeItem={activeItem} onEditTitle={onEditTitleName} />
               }
             />
           </Routes>

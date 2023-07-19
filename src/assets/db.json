@@ -1,115 +1,47 @@
 {
   "lists": [
     {
-      "id": 1,
-      "name": "Покупки",
-      "colorId": 5
+      "name": "Харьков",
+      "colorId": 5,
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "Фронтенд",
-      "colorId": 4
+      "name": "Киев",
+      "colorId": 1,
+      "id": 2
     },
     {
-      "id": 3,
-      "name": "Фильмы и сериалы",
-      "colorId": 3
+      "name": "Сумы",
+      "colorId": 3,
+      "id": 3
     },
     {
-      "id": 5,
-      "name": "Личное",
-      "colorId": 1
+      "name": "Запорожье",
+      "colorId": 4,
+      "id": 4
     },
     {
-      "name": "Курс по ReactJS ToDo",
+      "name": "Черкассы",
+      "colorId": 5,
+      "id": 5
+    },
+    {
+      "name": "Львов",
+      "colorId": 6,
+      "id": 6
+    },
+    {
+      "name": "Чернигов",
       "colorId": 7,
       "id": 7
     },
     {
-      "name": "Сделать Даше видео на день Рождение",
+      "name": "Одесса",
       "colorId": 8,
       "id": 8
     }
   ],
   "tasks": [
-    {
-      "id": 1,
-      "listId": 2,
-      "text": "Изучить JavaScript",
-      "completed": false
-    },
-    {
-      "id": 2,
-      "listId": 2,
-      "text": "Изучить паттерны проектирования",
-      "completed": false
-    },
-    {
-      "id": 3,
-      "listId": 2,
-      "text": "ReactJS Hooks (useState, useReducer, useEffect и т.д.)",
-      "completed": false
-    },
-    {
-      "id": 4,
-      "listId": 2,
-      "text": "Redux (redux-observable, redux-saga)",
-      "completed": false
-    },
-    {
-      "listId": 1,
-      "text": "qweqwe",
-      "completed": false,
-      "id": 7
-    },
-    {
-      "listId": 1,
-      "text": "qweqwe",
-      "completed": false,
-      "id": 8
-    },
-    {
-      "listId": 1,
-      "text": "123",
-      "completed": false,
-      "id": 9
-    },
-    {
-      "listId": 2,
-      "text": "555",
-      "completed": false,
-      "id": 12
-    },
-    {
-      "listId": 7,
-      "text": "Сделали сайдбар",
-      "completed": false,
-      "id": 15
-    },
-    {
-      "listId": 7,
-      "text": "Сделали список задач",
-      "completed": false,
-      "id": 16
-    },
-    {
-      "listId": 7,
-      "text": "Сделали удаление и редактирование задач и списков",
-      "completed": false,
-      "id": 17
-    },
-    {
-      "listId": 1,
-      "text": "1212",
-      "completed": false,
-      "id": 23
-    },
-    {
-      "listId": 3,
-      "text": "12121",
-      "completed": false,
-      "id": 24
-    },
     {
       "text": "Не Публичное!",
       "completed": false,
@@ -151,22 +83,50 @@
       "id": 32
     },
     {
-      "listId": 5,
-      "text": "Не Публичное!",
+      "text": "Сьездить в Харьков",
+      "completed": false,
+      "id": 33
+    },
+    {
+      "text": "Сьездить в Харьков",
+      "completed": false,
+      "id": 34
+    },
+    {
+      "text": "Сьездить в Харьков",
+      "completed": false,
+      "id": 35
+    },
+    {
+      "text": "Сьездить в Харьков",
       "completed": false,
       "id": 36
     },
     {
-      "listId": 5,
-      "text": "ПУБЛИЧНОЕ 😁",
+      "text": "Сьездить в Харьков",
       "completed": false,
       "id": 37
     },
     {
-      "listId": 8,
-      "text": "Завтра с утра смонтировать Даше видео 😜",
+      "text": "Сьездить в Харьков",
       "completed": false,
       "id": 38
+    },
+    {
+      "text": "Сьездить в Харьков",
+      "completed": false,
+      "id": 39
+    },
+    {
+      "text": "Сьездить в Харьков",
+      "completed": false,
+      "id": 40
+    },
+    {
+      "listId": 1,
+      "text": "Сьездить в Харьков",
+      "completed": false,
+      "id": 41
     }
   ],
   "colors": [

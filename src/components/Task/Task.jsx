@@ -6,7 +6,7 @@ import AddNewTask from "./AddNewTask";
 import TaskItem from "./TaskItem";
 import { NavLink } from "react-router-dom";
 
-const Task = ({ onEditTitle, activeItem, withoutEmpty }) => {
+const Task = ({ onEditTitle, activeItem, withoutEmpty, disable }) => {
   const { lists } = React.useContext(AppContext);
 
   const editItem = () => {
@@ -57,7 +57,7 @@ const Task = ({ onEditTitle, activeItem, withoutEmpty }) => {
         activeItem &&
         activeItem?.tasks?.map((task) => <TaskItem key={task.id} {...task} />)}
 
-      <AddNewTask key={activeItem?.id} />
+      {!disable && <AddNewTask key={activeItem?.id} />}
     </div>
   );
 };
