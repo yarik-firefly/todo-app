@@ -2,7 +2,7 @@
   "lists": [
     {
       "id": 1,
-      "name": "Продажи",
+      "name": "Покупки",
       "colorId": 5
     },
     {
@@ -16,24 +16,19 @@
       "colorId": 3
     },
     {
-      "id": 4,
-      "name": "Книги",
-      "colorId": 2
-    },
-    {
       "id": 5,
       "name": "Личное",
       "colorId": 1
     },
     {
-      "name": "Спорт",
-      "colorId": 3,
-      "id": 6
-    },
-    {
       "name": "Курс по ReactJS ToDo",
       "colorId": 7,
       "id": 7
+    },
+    {
+      "name": "Сделать Даше видео на день Рождение",
+      "colorId": 8,
+      "id": 8
     }
   ],
   "tasks": [
@@ -41,7 +36,7 @@
       "id": 1,
       "listId": 2,
       "text": "Изучить JavaScript",
-      "completed": true
+      "completed": false
     },
     {
       "id": 2,
@@ -53,25 +48,13 @@
       "id": 3,
       "listId": 2,
       "text": "ReactJS Hooks (useState, useReducer, useEffect и т.д.)",
-      "completed": true
+      "completed": false
     },
     {
       "id": 4,
       "listId": 2,
       "text": "Redux (redux-observable, redux-saga)",
       "completed": false
-    },
-    {
-      "listId": 2,
-      "text": "123",
-      "completed": true,
-      "id": 5
-    },
-    {
-      "listId": 1,
-      "text": "test",
-      "completed": false,
-      "id": 6
     },
     {
       "listId": 1,
@@ -82,7 +65,7 @@
     {
       "listId": 1,
       "text": "qweqwe",
-      "completed": true,
+      "completed": false,
       "id": 8
     },
     {
@@ -92,34 +75,98 @@
       "id": 9
     },
     {
-      "listId": 4,
-      "text": "Купить 1984!",
-      "completed": true,
-      "id": 10
-    },
-    {
       "listId": 2,
-      "text": "222",
-      "completed": true,
+      "text": "555",
+      "completed": false,
       "id": 12
     },
     {
       "listId": 7,
       "text": "Сделали сайдбар",
-      "completed": true,
+      "completed": false,
       "id": 15
     },
     {
       "listId": 7,
       "text": "Сделали список задач",
-      "completed": true,
+      "completed": false,
       "id": 16
     },
     {
       "listId": 7,
       "text": "Сделали удаление и редактирование задач и списков",
-      "completed": true,
+      "completed": false,
       "id": 17
+    },
+    {
+      "listId": 1,
+      "text": "1212",
+      "completed": false,
+      "id": 23
+    },
+    {
+      "listId": 3,
+      "text": "12121",
+      "completed": false,
+      "id": 24
+    },
+    {
+      "text": "Не Публичное!",
+      "completed": false,
+      "id": 25
+    },
+    {
+      "text": "No Public!",
+      "completed": false,
+      "id": 26
+    },
+    {
+      "text": "No Public!",
+      "completed": false,
+      "id": 27
+    },
+    {
+      "text": "No Public!",
+      "completed": false,
+      "id": 28
+    },
+    {
+      "text": "No Publci!",
+      "completed": false,
+      "id": 29
+    },
+    {
+      "text": "No Publci!",
+      "completed": false,
+      "id": 30
+    },
+    {
+      "text": "21212",
+      "completed": false,
+      "id": 31
+    },
+    {
+      "text": "21212",
+      "completed": false,
+      "id": 32
+    },
+    {
+      "listId": 5,
+      "text": "Не Публичное!",
+      "completed": false,
+      "id": 36
+    },
+    {
+      "listId": 5,
+      "text": "ПУБЛИЧНОЕ 😁",
+      "completed": false,
+      "id": 37
+    },
+    {
+      "listId": 8,
+      "text": "Завтра с утра смонтировать Даше видео 😜",
+      "completed": false,
+      "id": 38
     }
   ],
   "colors": [

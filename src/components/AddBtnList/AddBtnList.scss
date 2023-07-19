@@ -13,6 +13,7 @@
   position: relative;
   top: -30px;
   &__visible {
+    z-index: 5;
     visibility: visible;
     opacity: 1;
   }

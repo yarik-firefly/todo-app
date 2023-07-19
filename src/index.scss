@@ -25,11 +25,10 @@ code {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 746px;
-  min-height: 529px;
+  width: calc(100vw - 100px);
+  height: calc(100vh - 100px);
   background-color: #f1f1f1;
   transform: translate(-50%, -50%);
-  box-shadow: 2px 20px #f3f3f3;
   border-radius: 10px;
   border: 1px solid #f1f1f1;
 
@@ -88,6 +87,8 @@ code {
   }
 
   &__tasks {
+    position: relative;
+    overflow: auto;
     flex: 1;
     padding: 56px 57px;
     background-color: white;

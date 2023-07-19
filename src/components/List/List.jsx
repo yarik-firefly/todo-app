@@ -4,6 +4,7 @@ import "./List.scss";
 import Badge from "../Badge/Badge";
 import axios from "axios";
 import AppContext from "../../context/AppContext";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const List = ({
   items,
@@ -13,14 +14,23 @@ const List = ({
   onClickItem,
   activeItem,
 }) => {
-  // const { deleteItem, setDeleteItem } = React.useContext(AppContext);
+  const navigate = useNavigate();
   const removeList = (item) => {
     // setShowDeletePopup(true);
     if (window.confirm("Вы действительно хотите удалить?")) {
-      axios.delete(`http://localhost:3001/lists/${item.id}`).then(() => {
-        onRemove(item.id);
-        // setShowDeletePopup(false);
-      });
+      axios
+        .delete(`http://localhost:3001/lists/${item.id}`)
+        .then(() => {
+          onRemove(item.id);
+          // setShowDeletePopup(false);
+        })
+        .catch((e) => {
+          alert("Не удалось удалить список 🙄");
+          console.error(e);
+        })
+        .finally(() => {
+          navigate("/");
+        });
     }
   };
 
@@ -29,9 +39,9 @@ const List = ({
       {items.map((item, index) => (
         <li
           onClick={onClickItem ? () => onClickItem(item) : null}
-          className={`${item.className}${
+          className={`${item.className} ${
             activeItem && activeItem?.id === item.id && " active"
-          } `}
+          } ${item.active ? "active" : ""} `}
           key={index}
         >
           {item.img ? (

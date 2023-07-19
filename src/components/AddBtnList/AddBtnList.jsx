@@ -40,8 +40,11 @@ const AddBtnList = ({ colors, onAdd }) => {
         colorId: selectedColor,
       })
       .then(({ data }) => {
-        const color = colors.filter((c) => c.id === selectedColor)[0].name;
-        const listObj = { ...data, color: { name: color } };
+        const color = colors.filter((c) => c.id === selectedColor)[0];
+        const listObj = {
+          ...data,
+          color: { name: color.name, hex: color.hex, tasks: [] },
+        };
         onAdd(listObj);
         simpleSettings();
       })
@@ -60,7 +63,7 @@ const AddBtnList = ({ colors, onAdd }) => {
       />
 
       <div className={`popup ${showPopup ? `popup__visible` : ""}`}>
-        <div className={`popup__empty-input ${emptyInput && "active"}`}>
+        <div className={`popup__empty-input ${emptyInput ? "active" : ""}`}>
           <p>Введите название</p>
         </div>
         <img
